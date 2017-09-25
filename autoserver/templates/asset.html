@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AssetList</title>
+    <style>
+        .search-item .no-radius {
+            border-radius: 0;
+        !important;
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="/static/plugins/bootstrap-3.3.7-dist/css/bootstrap.css">
+</head>
+<body>
+<div style="width: 1000px;min-width:700px;margin: 0 auto">
+    <h2>ASSET_LIST</h2>
+
+    {% include 'searchlist.html' %}
+    {% include 'optionmenu.html' %}
+
+    <table class="table table-bordered table-hover">
+        <thead id="thead">
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+</div>
+</body>
+<script src="/static/js/jquery-3.2.1.js"></script>
+<script src="/static/plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="/static/plugins/show-list.js"></script>
+<script>
+    $.showList('/backstage/asset_json.html');
+</script>
+</html>
